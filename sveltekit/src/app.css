@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: LL;
+		src: url('/fonts/serif/linuxlibertine.ttf') format('truetype');
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: Gilmer;
+		src: url('/fonts/gilmer/light.otf') format('opentype');
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: Gilmer;
+		src: url('/fonts/gilmer/normal.otf') format('opentype');
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: Gilmer;
+		src: url('/fonts/gilmer/bold.otf') format('opentype');
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: Gilmer;
+		src: url('/fonts/gilmer/extrabold.otf') format('opentype');
+		font-weight: 800;
+		font-style: normal;
+	}
+
+	body {
+		@apply text-orange bg-dark m-0 p-0;
+		/* overflow-x: hidden; */
+		/* background-image: url('/bg1.png');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		 */
+	}
+
+	h1 {
+		@apply text-4xl sm:text-5xl md:text-6xl  text-center font-extrabold;
+	}
+	h2 {
+		@apply text-3xl sm:text-4xl md:text-5xl text-center font-extrabold;
+	}
+	h3 {
+		@apply text-2xl sm:text-3xl md:text-4xl text-center font-bold;
+	}
+	h4 {
+		@apply text-xl sm:text-2xl md:text-3xl text-center font-bold;
+	}
+	h5 {
+		@apply text-lg sm:text-xl md:text-2xl text-center;
+	}
+
+	::-webkit-scrollbar {
+		max-width: 5px;
+		max-height: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		border: 1px solid dark;
+		opacity: 10;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: orange;
+		border-radius: 50px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: darkOrange;
+	}
+}
+
+@layer components {
+	.mbtn {
+		@apply text-center font-bold rounded-md border-2 border-orange bg-dark text-orange py-1 px-6 cursor-pointer transition-all;
+	}
+	.mbtn-invert {
+		@apply text-center font-bold rounded-md border-2 border-orange bg-orange text-dark py-1 px-6 cursor-pointer transition-all;
+	}
+
+	.mbtn-hover {
+		@apply mbtn transition-all hover:border-dark  hover:text-dark hover:bg-orange hover:-translate-y-[2px];
+	}
+	.mbtn-invert-hover {
+		@apply mbtn-invert transition-all hover:text-orange hover:bg-dark hover:-translate-y-[2px];
+	}
+
+	.input-border-down {
+		@apply border-b-4 text-orange text-xl border-opacity-10 border-b-orange rounded-md shadow-md bg-dark outline-none placeholder:opacity-40 p-2;
+	}
+
+	.input-border {
+		@apply border-2 text-orange text-xl border-opacity-10 border-orange rounded-md shadow-md bg-dark outline-none placeholder:opacity-40 p-2 pl-3;
+	}
+
+	.shadow-orange {
+		box-shadow: 0 0px 10px 3px rgba(255, 159, 0, 0.3);
+	}
+
+	.shadow-orange:hover {
+		box-shadow: 0 0px 10px 3px rgba(255, 159, 0, 0.4);
+	}
+
+	.profile-picture-small {
+		@apply rounded-md min-h-[42px] min-w-[42px] max-h-[42px] max-w-[42px] shadow-md shadow-darker;
+	}
+
+	.profile-picture-medium {
+		@apply rounded-md min-h-[70px] min-w-[70px] max-h-[70px] max-w-[70px] shadow-md shadow-darker;
+	}
+
+	.profile-picture-big {
+		@apply rounded-md min-h-[135px] min-w-[135px] max-h-[135px] max-w-[135px] shadow-md shadow-darker;
+	}
+
+	.profile-picture-micro {
+		@apply rounded-md min-h-[30px] min-w-[30px] max-h-[30px] max-w-[30px] shadow-md shadow-darker;
+	}
+}

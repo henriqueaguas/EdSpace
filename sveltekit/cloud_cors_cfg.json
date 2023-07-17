@@ -1,0 +1,14 @@
+[
+  {
+    "origin": [
+      "*"
+    ],
+    "method": [
+      "GET"
+    ],
+    "responseHeader": [
+      "Access-Control-Allow-Origin"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]

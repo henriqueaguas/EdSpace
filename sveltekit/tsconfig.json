@@ -1,0 +1,39 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"$lib": [
+				"./src/lib"
+			],
+			"$lib/*": [
+				"./src/lib/*"
+			],
+			"$envvars/*": [
+				"./src/env/*"
+			],
+		},
+		"allowJs": true,
+		"checkJs": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+	},
+	"include": [
+		"./",
+		"ambient.d.ts",
+		"./types/**/$types.d.ts",
+		"../vite.config.ts",
+		"../src/**/*.js",
+		"../src/**/*.ts",
+		"../src/**/*.svelte",
+		"../tests/**/*.js",
+		"../tests/**/*.ts",
+		"../tests/**/*.svelte"
+	]
+}
